@@ -1,0 +1,240 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f6f2;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.0rem 14%;
+  background-color: white;
+  border-bottom: 1px solid #e0dcd6;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 212px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #7a6a58;
+  font-weight: 600;
+  margin: 0 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #c4a27e;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b68c5a;
+  text-align: center;
+}
+
+.logo img {
+  max-height: 380px;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-height: 90vh;
+  transform: 2s;
+  
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 678px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 0;
+}
+
+.slide.active {
+  opacity: 1.5;
+  z-index: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.whatsapp img {
+  width: 32px;
+  height: 32px;
+}
+
+.sobre {
+  background-color: #fff5ec;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.texto-sobre {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #7a6a58;
+}
+
+.texto-sobre h2 {
+  font-size: 2rem;
+  color: #b68c5a;
+  margin-bottom: 20px;
+}
+
+.texto-sobre p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.texto-sobre h3 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  color: #7a6a58;
+}
+
+.botao-ensaios {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #b68c5a;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-ensaios:hover {
+  background-color: #9e7345;
+}
+
+.ensaios {
+  background-color: #f9f6f2;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.ensaios h2 {
+  color: #b68c5a;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.ensaios ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.ensaios ul li {
+  font-size: 1.1rem;
+  color: #7a6a58;
+  margin-bottom: 12px;
+}
+@media (max-width: 768px) {
+  header {
+    height: 100px;
+    flex-direction: row;
+    text-align: center;
+    padding: 0;
+  }
+  .img-douglas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+  .logo img {
+    max-height: 150px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-items: flex-start;
+  }
+  .nav1 a{
+    margin: 0.5rem 0;
+    padding-left: 10px;
+    
+  }
+  .nav2 a{
+    margin: 0.5rem 0;
+    padding-right: 10px;
+    
+  }
+
+  .texto-sobre h2,
+  .ensaios h2 {
+    font-size: 1.5rem;
+  }
+
+  .texto-sobre p,
+  .ensaios ul li {
+    font-size: 0.95rem;
+  }
+
+  .slideshow-container {
+    height: 300px;
+  }
+
+  .slide img {
+    object-position: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .botao-ensaios {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .whatsapp img {
+    width: 28px;
+    height: 28px;
+  }
+}
