@@ -30,6 +30,10 @@ nav a {
 nav a:hover {
   color: #c4a27e;
 }
+.hero img{
+  max-width: 100%;
+}
+
 
 .logo {
   font-size: 1.5rem;
@@ -62,16 +66,18 @@ nav a:hover {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 1.5s ease-in-out;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transform: scale(1.02);
   z-index: 0;
 }
 
 .slide.active {
-  opacity: 1.5;
+  opacity: 1;
+  transform: scale(1);
   z-index: 1;
 }
 
-.slide img {
+.slide, .fotos img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -219,7 +225,7 @@ nav a:hover {
   }
 
   .slideshow-container {
-    height: 300px;
+    height: 45%;
   }
 
   .slide img {
@@ -237,4 +243,108 @@ nav a:hover {
     width: 28px;
     height: 28px;
   }
+  .img-douglas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(182, 140, 90, 0.7);
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  padding: 0 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  z-index: 10;
+}
+
+.slide-btn:hover {
+  background: #b68c5a;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.slide-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 14px;
+  height: 14px;
+  background: rgba(182, 140, 90, 0.5);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active,
+.indicator:hover {
+  background: #b68c5a;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.botao-ensaios {
+  transform: scale(1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.botao-ensaios:hover {
+  transform: scale(1.05);
+}
+
+.logo img {
+  animation: logoEntrada 1.2s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes logoEntrada {
+  from {
+    transform: scale(0.9) translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #a86c3f;
+  transform: scale(1.1);
+}
+
+
+
+
+
 }
